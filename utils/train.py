@@ -2,7 +2,7 @@ import time
 import torch
 import torch.nn as nn
 import numpy as np
-from optimizer.StepTunedSGD import AdaptiveBBTuner
+from optimizer.ASBB import AdaptiveBBTuner
 from utils.classification_evaluation import performance_evaluation
 
 # Set seeds

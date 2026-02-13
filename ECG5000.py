@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader, TensorDataset
 from sklearn.preprocessing import RobustScaler
 from models.neural_network import CNN1D
 from utils.train import train_ASBB
-from optimizer.StepTunedSGD import StepTunedSGD, AdaptiveBBTuner
+from optimizer.ASBB import StepTunedSGD, AdaptiveBBTuner
 
 def parse_args():
     parser = argparse.ArgumentParser(description='ECG5000 classification problem')
@@ -22,12 +22,12 @@ def parse_args():
     parser.add_argument('--learning_rate', type=float, default=1e-4, help='Step size for gradient updates')
     parser.add_argument('--weight_decay', type=float, default=1e-2, help='L2 regularization (ridge)')
     
-    # StepTunedSGD parameters
-    parser.add_argument('--alpha', type=float, default=1.0, help='Alpha parameter for StepTunedSGD')
-    parser.add_argument('--m_tilde', type=float, default=0.01, help='Lower bound for step size in StepTunedSGD')
-    parser.add_argument('--M_tilde', type=float, default=10.0, help='Upper bound for step size in StepTunedSGD')
+    # ASBB parameters
+    parser.add_argument('--alpha', type=float, default=1.0, help='Alpha parameter for ASBB')
+    parser.add_argument('--m_tilde', type=float, default=0.01, help='Lower bound for step size in ASBB')
+    parser.add_argument('--M_tilde', type=float, default=10.0, help='Upper bound for step size in ASBB')
     parser.add_argument('--window_size', type=int, default=3, help='Window size for updating the parameters')
-    parser.add_argument('--initial_tau', type=float, default=0.5, help='Initial tau for StepTunedSGD')
+    parser.add_argument('--initial_tau', type=float, default=0.51, help='Initial tau for ASBB')
         
     return parser.parse_args()
 

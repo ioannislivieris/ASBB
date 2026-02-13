@@ -295,11 +295,11 @@ The included CNN1D model provides:
 If you use this optimizer in your research, please cite:
 
 ```bibtex
-@software{asbb2025,
+@software{asbb2026,
   author = {Livieris, Ioannis E. and Pintelas, Emmanuel},
-  title = {ASBB: Adaptive Stochastic Barzilai-Borwein Optimizer},
-  year = {2025},
-  publisher = {GitHub},
+  title = {Adaptive Stochastic Barzilai-Borwein algorithm for neural network training},
+  year = {2026},
+  publisher = {submitted to Neurocomputing},
   url = {https://github.com/yourusername/asbb}
 }
 ```
@@ -312,17 +312,3 @@ If you use this optimizer in your research, please cite:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-This work builds upon the classical Barzilai-Borwein method, adapting it for modern deep learning with stochastic gradients and dynamic parameter tuning.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Contact
-
-For questions or feedback, please contact:
-- Ioannis E. Livieris: livieris@upatras.gr
-- Emmanuel Pintelas: e.pintelas@upatras.gr
